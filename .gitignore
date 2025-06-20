@@ -13,3 +13,8 @@ bun.lock
 package.json
 tsconfig.json
 eslint.config.mjs
+
+# Rust
+/target
+Cargo.toml
+Cargo.lock
