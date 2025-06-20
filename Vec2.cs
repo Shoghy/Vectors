@@ -29,11 +29,7 @@ struct Vec2(float x, float y)
 		}
 	}
 
-	public readonly float AngleFrom(Vec2 origin)
-	{
-		var subtraction = this - origin;
-		return subtraction.Angle;
-	}
+	public readonly float AngleFrom(Vec2 origin) => (this - origin).Angle;
 
 	public readonly Vec2 MoveTowards(Vec2 target, float maxDistance)
 	{

@@ -31,8 +31,7 @@ export class Vec2 {
   }
 
   angleFrom(origin: Vec2): number {
-    const subtraction = this.subtract(origin);
-    return subtraction.angle;
+    return this.subtract(origin).angle;
   }
 
   moveTowards(target: Vec2, maxDistance: number): Vec2 {
