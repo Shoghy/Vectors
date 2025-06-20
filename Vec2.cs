@@ -83,4 +83,12 @@ struct Vec2(float x, float y)
 	public static Vec2 operator /(Vec2 vec2, float div) => new(vec2.X / div, vec2.Y / div);
 
 	public static Vec2 operator *(Vec2 vec2, float mul) => new(vec2.X * mul, vec2.Y * mul);
+
+	public static bool operator ==(Vec2 a, Vec2 b) => a.X == b.X && a.Y == b.Y;
+
+	public static bool operator !=(Vec2 a, Vec2 b) => a.X != b.X || a.Y != b.Y;
+
+	public override readonly bool Equals(object? obj) => obj is Vec2 vec && vec == this;
+
+	public override readonly int GetHashCode() => base.GetHashCode();
 }

@@ -39,7 +39,7 @@ export class Vec2 {
     const subtraction = target.subtract(this);
     const magnitude = subtraction.magnitude;
 
-    if(magnitude <= maxDistance || magnitude === 0) {
+    if (magnitude <= maxDistance || magnitude === 0) {
       return target.copy();
     }
 
@@ -53,7 +53,7 @@ export class Vec2 {
     const difference = Math.abs(targetAngle - currentAngle);
     const copy = this.copy();
 
-    if(difference <= maxAngle || difference === 0){
+    if (difference <= maxAngle || difference === 0) {
       copy.angle = targetAngle;
       return copy;
     }
@@ -68,7 +68,7 @@ export class Vec2 {
     }
 
     copy.angle = currentAngle + maxAngle * s;
-  
+
     return copy;
   }
 
@@ -90,5 +90,9 @@ export class Vec2 {
 
   multiply(mul: number): Vec2 {
     return new Vec2(this.x * mul, this.y * mul);
+  }
+
+  equal(vec: Vec2): boolean {
+    return this.x === vec.x && this.y === vec.y;
   }
 }
