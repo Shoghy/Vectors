@@ -1,0 +1,13 @@
+# C#
+bin/
+obj/
+.config/
+*.csproj
+*.sln
+
+# TypeScript
+node_modules/
+bun.lock
+package.json
+tsconfig.json
+eslint.config.mjs
